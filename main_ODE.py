@@ -23,7 +23,7 @@ X0 = [5, 6, 3, 4]  # Initial conditions for X1, X2, X3 and X4
 t_span = (0, 10)  # Time span for the solution
 t_eval = np.linspace(0, 10, 300)  # Time points at which to store the computed values
 
-sol = solve_ivp(ode_system, t_span, X0, method='RK45', t_eval=t_eval)
+sol = solve_ivp(ode_system, t_span, X0, method='DOP853', t_eval=t_eval)
 
 # Plot the results
 #plt.plot(sol.t, sol.y[0], label='X1(t)')
